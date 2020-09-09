@@ -1,0 +1,71 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+
+#home {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-img {
+  height: 100%;
+  background-image: url(../assets/guitar-main-uneditted-bigger.png);
+  
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: blur(3.5px) brightness(0.6); */
+
+}
+
+#home nav {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.logo-text {
+  flex: 1;
+  display: inline;
+}
+
+.navbar-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-items-text {
+  display: inline;
+  margin: 5px;
+}
+
+.contact-nav {
+  margin-right: 5px;
+}
+
+.header-exposition-text {
+  position: absolute;
+  width: 274px;
+  height: 139px;
+  right: 150px;
+  top: 250px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+
+  color: #F3F9F1;
+}
+
