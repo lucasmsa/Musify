@@ -1,71 +1,171 @@
-*{
+* {
   padding: 0;
   margin: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-body, html {
+html,
+body {
   height: 100%;
   width: 100%;
 }
-
 
 #home {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-}
-
-.main-img {
-  height: 100%;
-  background-image: url(../assets/guitar-main-uneditted-bigger.png);
-  
+  background-image: url(../assets/new-front-image.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* filter: blur(3.5px) brightness(0.6); */
-
 }
 
-#home nav {
+#musify-icon {
+  width: 15%;
+  height: 15%;
+  margin: 3% 0 3% 3%;
+}
+
+nav {
+  width: 100%;
+  min-height: 8vh;
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.logo-text {
-  flex: 1;
-  display: inline;
+nav .logo {
+  display: flex;
 }
 
-.navbar-items {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+nav .logo-text {
+  color: #ecfee6;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: auto 2%;
 }
 
-.navbar-items-text {
-  display: inline;
+.nav-links {
+  display: flex;
+  margin: auto 1% auto 0;
+  justify-content: space-around;
+  width: 35vw;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ecfee6;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.navbar-dark {
+  background-color: black;
+}
+
+.burger {
+  display: none;
+  margin-right: 1%;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #ecfee6;
   margin: 5px;
 }
 
-.contact-nav {
-  margin-right: 5px;
+.presentation-container {
+  height: 92vh;
+  display: flex;
+  align-items: center;
 }
 
-.header-exposition-text {
-  position: absolute;
-  width: 274px;
-  height: 139px;
-  right: 150px;
-  top: 250px;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 27px;
+.presentation {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
   text-align: center;
-
-  color: #F3F9F1;
+  margin-left: auto;
+  margin-right: 2%;
+  justify-content: center;
+  align-items: center;
 }
 
+.presentation h1 {
+  margin: 3%;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+
+  color: #ecfee6;
+}
+
+.start-now {
+  margin-top: 20px;
+  font-family: Montserrat;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #ecfee6;
+  background-color: #3b8223;
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-links {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    top: 8vh;
+    height: 92vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    width: 40%;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
