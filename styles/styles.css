@@ -13,7 +13,8 @@ body {
 #home {
   width: 100vw;
   height: 100vh;
-  background-image: url(../assets/new-front-image.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+    url(../assets/new-front-image.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +32,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav .logo {
@@ -66,6 +67,11 @@ nav .logo-text {
   font-weight: normal;
   text-transform: uppercase;
   font-size: 0.8rem;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #aeb9ab;
 }
 
 .navbar-dark {
@@ -93,10 +99,11 @@ nav .logo-text {
 .presentation {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 60%;
   text-align: center;
-  margin-left: auto;
-  margin-right: 2%;
+  margin: auto;
+  /* margin-left: auto;
+  margin-right: 2%; */
   justify-content: center;
   align-items: center;
 }
@@ -105,24 +112,39 @@ nav .logo-text {
   margin: 3%;
   font-family: Montserrat;
   font-weight: bold;
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-
-  color: #ecfee6;
+  font-size: 4rem;
+  line-height: 4rem;
+  color: #ebebeb;
 }
 
 .start-now {
-  margin-top: 20px;
+  margin-top: 5%;
   font-family: Montserrat;
   font-weight: bolder;
   text-transform: uppercase;
-  color: #ecfee6;
-  background-color: #3b8223;
+  font-size: 1rem;
+  color: #ebebeb;
+  background-color: #3c8223;
+  border: none;
+  border-radius: 100px;
+  padding: 0.5rem 2rem;
+  transition: 0.3s ease;
+}
+
+.start-now:hover {
+  background-color: #2b5a19;
+}
+
+.start-now:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 1100px) {
   .nav-links {
     width: 45%;
+  }
+  .presentation {
+    width: 65%;
   }
 }
 
@@ -143,7 +165,7 @@ nav .logo-text {
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-    width: 40%;
+    width: 25%;
   }
   .nav-links li {
     opacity: 0;
@@ -152,6 +174,10 @@ nav .logo-text {
   .burger {
     display: block;
     cursor: pointer;
+  }
+
+  .presentation {
+    width: 85%;
   }
 }
 
