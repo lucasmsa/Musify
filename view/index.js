@@ -15,3 +15,11 @@ burger.addEventListener("click", () => {
     }
   });
 });
+
+$(window).on('scroll', () => {
+  if ($(window).scrollTop()) {
+    $('nav').addClass("navbar-dark");
+  } else {
+    $('nav').removeClass("navbar-dark");
+  }
+})
