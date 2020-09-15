@@ -261,6 +261,10 @@ nav .logo-text {
     font-size: 2.5rem;
     color: #3B8223;
   }
+
+  #contact h2 {
+    font-size: 2.5rem;
+  }
   
   #about-text-p {
     font-family: Poppins;
@@ -336,43 +340,6 @@ nav .logo-text {
 }
 
 
-@media screen and (max-width: 565px) { 
-  #why-musify-image {
-    width: 300px;
-    height: 200px;
-  }
-
-  #why-musify-text-h2 {
-    font-size: 2.5rem;
-    color: #3B8223;
-  }
-  
-  #why-musify-text-p {
-    font-family: Poppins;
-    font-size: 1rem;
-    width: 280px;
-  }
-}
-
-
-@media screen and (max-width: 916px) { 
-  #why-musify-image {
-    margin-left: 0;
-    margin-right: 0;  
-  }
-
-  .presentation h1 {
-    font-size: 2.5rem;
-    line-height: 45px;
-    width: 80%;
-  }
-
-  .start-now {
-    font-size: 0.8rem;
-    height: 40px;
-    align-items: center;
-  }
-}
 
 
 #cards-container {
@@ -461,4 +428,67 @@ nav .logo-text {
 
 #join-text {
   width: 150px;
+}
+
+/* Contact */
+
+#contact {
+  height: 20rem;
+  background:  #ebebeb;
+  margin-top: 480px;
+  padding-top: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header-contact {
+  font-size: 3rem;
+  color: #3B8223;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  margin-top: 32px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid black;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+
+}
+
+@media screen and (max-width: 565px) { 
+  #why-musify-image {
+    width: 300px;
+    height: 200px;
+  }
+
+  #why-musify-text-h2 {
+    font-size: 2.5rem;
+    color: #3B8223;
+  }
+  
+  #why-musify-text-p {
+    font-family: Poppins;
+    font-size: 1rem;
+    width: 280px;
+  }
+}
+
+
+@media screen and (max-width: 916px) { 
+  #why-musify-image {
+    margin-left: 0;
+    margin-right: 0;  
+  }
+
+  .start-now {
+    font-size: 0.8rem;
+    height: 40px;
+    align-items: center;
+  }
 }
