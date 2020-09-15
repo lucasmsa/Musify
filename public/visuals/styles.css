@@ -38,6 +38,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
 }
 
 nav .logo {
@@ -107,8 +108,6 @@ nav .logo-text {
   width: 60%;
   text-align: center;
   margin: auto;
-  /* margin-left: auto;
-  margin-right: 2%; */
   justify-content: center;
   align-items: center;
 }
@@ -134,6 +133,8 @@ nav .logo-text {
   border-radius: 100px;
   padding: 1rem 2.5rem;
   transition: 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .start-now:hover {
@@ -205,7 +206,7 @@ nav .logo-text {
 
 #about {
   width: 100%;
-  height: 30rem;
+  height: 32rem;
   background: #ebebeb;
 }
 
@@ -279,5 +280,185 @@ nav .logo-text {
   #about-image {
     margin-left: 0;
     margin-right: 0;
+    transform: translateY(-30px);
+
   }
+}
+
+
+/* Why Musify */
+
+#why-musify {
+  width: 100%;
+  height: 20rem;
+  background: #141212;
+}
+
+#why-musify-elements {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#why-musify-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#why-musify-text-h2 {
+  font-family: 'Montserrat';
+  font-size: 3.5rem;
+  color: #3B8223; 
+  margin-bottom: 2.25rem;
+}
+
+#why-musify-text-p {
+  font-family: Poppins;
+  font-size: 1.1rem;
+  color: #F3F9F1;
+  max-width: 400px;
+  text-align: center;
+}
+
+#why-musify-image-wrapper {
+  display: flex;
+}
+
+#why-musify-image {
+  width: 550px;
+  height: 360px;
+  border: 4px solid #000000;
+  margin-right: 50px;
+  margin-left: 5rem;
+}
+
+
+@media screen and (max-width: 565px) { 
+  #why-musify-image {
+    width: 300px;
+    height: 200px;
+  }
+
+  #why-musify-text-h2 {
+    font-size: 2.5rem;
+    color: #3B8223;
+  }
+  
+  #why-musify-text-p {
+    font-family: Poppins;
+    font-size: 1rem;
+    width: 280px;
+  }
+}
+
+
+@media screen and (max-width: 916px) { 
+  #why-musify-image {
+    margin-left: 0;
+    margin-right: 0;  
+  }
+
+  .presentation h1 {
+    font-size: 2.5rem;
+    line-height: 45px;
+    width: 80%;
+  }
+
+  .start-now {
+    font-size: 0.8rem;
+    height: 40px;
+    align-items: center;
+  }
+}
+
+
+#cards-container {
+  width: 100%;
+  height: 30rem;
+  background:#141212;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 420px;
+  background:  #ebebeb;
+  margin: 2px 10px;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  transition: background-color 0.8s;
+  border: 5px solid black;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-items {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-price-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-card {
+  margin-left: 5px;
+}
+
+.list-prices {
+  font-family: Poppins;
+  font-size: 0.8rem;
+  color: #000;
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 15px;  
+  list-style: none;
+}
+
+
+.list-prices li:nth-child(1) {
+  margin-top: 8px;
+}
+
+.card:hover {
+  background-color:#f7fff4cb;
+}
+
+.join-price {
+  font-family: Montserrat;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color:  #3c8223;
+  background-color: #ebebeb;
+  border: 2px solid #3c8223;
+  border-radius: 100px;
+  padding: 1rem 2.5rem;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin: auto 12px 16px 12px;
+}
+
+.join-price:hover {
+  background-color: #3c8223;
+  color: #ebebeb;
+  transform: translateY(-3px);
+}
+
+#join-text {
+  width: 150px;
 }
