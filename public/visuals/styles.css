@@ -97,15 +97,16 @@ nav .logo-text {
 }
 
 .presentation-container {
-  height: 92vh;
+  padding-top: 8vh;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .presentation {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   text-align: center;
   margin: auto;
   justify-content: center;
@@ -113,20 +114,21 @@ nav .logo-text {
 }
 
 .presentation h1 {
-  margin: 3%;
+  padding: 3% 3% 5%;
   font-family: Montserrat;
   font-weight: bold;
-  font-size: 4rem;
-  line-height: 4rem;
-  color: #ebebeb;
+  font-size: 3.75rem;
+  line-height: 4.75rem;
+  text-transform: uppercase;
+  color: white;
 }
 
 .start-now {
-  margin-top: 5%;
+  margin-top: 4%;
   font-family: Montserrat;
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #ebebeb;
   background-color: #3c8223;
   border: none;
@@ -206,8 +208,9 @@ nav .logo-text {
 
 #about {
   width: 100%;
-  height: 32rem;
   background: #ebebeb;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
 }
 
 #about-elements {
@@ -217,6 +220,7 @@ nav .logo-text {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  
 }
 
 #about-text {
@@ -293,18 +297,19 @@ nav .logo-text {
 /* Why Musify */
 
 #why-musify {
+  padding-top: 5rem;
   width: 100%;
-  height: 20rem;
   background: #141212;
+  padding-bottom: 15rem;
 }
 
 #why-musify-elements {
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 4rem;
 }
 
 #why-musify-text {
@@ -340,23 +345,21 @@ nav .logo-text {
 }
 
 
-
-
 #cards-container {
-  width: 100%;
-  height: 30rem;
   background:#141212;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+
+
 .card {
-  width: 200px;
+  width: 250px;
   height: 420px;
   background:  #ebebeb;
   margin: 2px 10px;
   border-radius: 12px;
-  flex-wrap: wrap;
   transition: background-color 0.8s;
   border: 5px solid black;
 }
@@ -384,7 +387,7 @@ nav .logo-text {
 
 .list-prices {
   font-family: Poppins;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #000;
   max-width: 300px;
   text-align: center;
@@ -400,10 +403,6 @@ nav .logo-text {
   margin-top: 8px;
 }
 
-.card:hover {
-  background-color:#f7fff4cb;
-}
-
 .join-price {
   font-family: Montserrat;
   font-weight: bolder;
@@ -417,6 +416,7 @@ nav .logo-text {
   transition: 0.3s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: auto 12px 16px 12px;
 }
 
@@ -433,10 +433,9 @@ nav .logo-text {
 /* Contact */
 
 #contact {
-  height: 20rem;
-  background:  #ebebeb;
-  margin-top: 480px;
-  padding-top: 64px;
+  background: #ebebeb;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -487,8 +486,14 @@ input {
   }
 
   .start-now {
-    font-size: 0.8rem;
-    height: 40px;
+    font-size: 1rem;
+    height: 60px;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 438px) { 
+  #cards-container {
+    height: 40rem;
   }
 }
