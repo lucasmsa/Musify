@@ -4,35 +4,29 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
-  height: 100%;
-  width: 100%;
   text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important; 
+  -webkit-font-smoothing: antialiased !important;
 }
 
-/* Header */
-
-#home {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
-    url(../assets/new-front-image.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.content-wrapper {
+  position: relative;
+  overflow-x: hidden;
 }
 
-#musify-icon {
-  width: 15%;
-  height: 15%;
-  margin: 3% 0 3% 3%;
-}
+/*********************navbar*********************/
 
 nav {
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
   min-height: 8vh;
   display: flex;
   justify-content: space-between;
@@ -43,6 +37,12 @@ nav {
 
 nav .logo {
   display: flex;
+}
+
+nav .logo img {
+  width: 15%;
+  height: 15%;
+  margin: 3% 0 3% 3%;
 }
 
 nav .logo-text {
@@ -96,27 +96,41 @@ nav .logo-text {
   margin: 5px;
 }
 
+/*********************home*********************/
+
+#home {
+  height: 100vh;
+  background-color: #535353;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+    url(../assets/new-front-image.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*        Presentation        */
+
 .presentation-container {
-  padding-top: 8vh;
+  position: relative;
+  top: 8%;
+  left: 0;
+  height: 92%;
   display: flex;
-  align-items: center;
-  height: 100%;
+  padding: 5% 10%;
+  justify-content: center;
 }
 
 .presentation {
   display: flex;
   flex-direction: column;
-  width: 50%;
   text-align: center;
-  margin: auto;
   justify-content: center;
   align-items: center;
 }
 
 .presentation h1 {
-  padding: 3% 3% 5%;
-  font-family: Montserrat;
-  font-weight: bold;
+  font-family: "Prompt";
+  font-weight: 700;
   font-size: 3.75rem;
   line-height: 4.75rem;
   text-transform: uppercase;
@@ -124,16 +138,16 @@ nav .logo-text {
 }
 
 .start-now {
-  margin-top: 4%;
+  margin-top: 2rem;
   font-family: Montserrat;
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1vmax;
   color: #ebebeb;
   background-color: #3c8223;
   border: none;
   border-radius: 100px;
-  padding: 1rem 2.5rem;
+  padding: 1rem 3rem;
   transition: 0.3s ease;
   display: flex;
   align-items: center;
@@ -220,7 +234,6 @@ nav .logo-text {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
 }
 
 #about-text {
@@ -230,9 +243,9 @@ nav .logo-text {
 }
 
 #about-text-h2 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 3.5rem;
-  color: #3B8223;
+  color: #3b8223;
   margin-bottom: 2rem;
 }
 
@@ -254,8 +267,7 @@ nav .logo-text {
   margin-left: 5rem;
 }
 
-
-@media screen and (max-width: 565px) { 
+@media screen and (max-width: 565px) {
   #about-image {
     width: 300px;
     height: 200px;
@@ -263,13 +275,13 @@ nav .logo-text {
 
   #about-text-h2 {
     font-size: 2.5rem;
-    color: #3B8223;
+    color: #3b8223;
   }
 
   #contact h2 {
     font-size: 2.5rem;
   }
-  
+
   #about-text-p {
     font-family: Poppins;
     font-size: 1rem;
@@ -277,22 +289,20 @@ nav .logo-text {
   }
 }
 
-@media screen and (max-width: 1260px) and (min-width: 566px) { 
+@media screen and (max-width: 1260px) and (min-width: 566px) {
   #about-image {
     width: 360px;
     height: 250px;
   }
 }
 
-@media screen and (max-width: 1049px) { 
+@media screen and (max-width: 1049px) {
   #about-image {
     margin-left: 0;
     margin-right: 0;
     transform: translateY(-30px);
-
   }
 }
-
 
 /* Why Musify */
 
@@ -318,16 +328,16 @@ nav .logo-text {
 }
 
 #why-musify-text-h2 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 3.5rem;
-  color: #3B8223; 
+  color: #3b8223;
   margin-bottom: 2.25rem;
 }
 
 #why-musify-text-p {
   font-family: Poppins;
   font-size: 1.1rem;
-  color: #F3F9F1;
+  color: #f3f9f1;
   max-width: 400px;
   text-align: center;
 }
@@ -344,20 +354,17 @@ nav .logo-text {
   margin-left: 5rem;
 }
 
-
 #cards-container {
-  background:#141212;
+  background: #141212;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-
-
 .card {
   width: 250px;
   height: 420px;
-  background:  #ebebeb;
+  background: #ebebeb;
   margin: 2px 10px;
   border-radius: 12px;
   transition: background-color 0.8s;
@@ -394,10 +401,9 @@ nav .logo-text {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 15px;  
+  margin: 15px;
   list-style: none;
 }
-
 
 .list-prices li:nth-child(1) {
   margin-top: 8px;
@@ -408,7 +414,7 @@ nav .logo-text {
   font-weight: bolder;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color:  #3c8223;
+  color: #3c8223;
   background-color: #ebebeb;
   border: 2px solid #3c8223;
   border-radius: 100px;
@@ -443,7 +449,7 @@ nav .logo-text {
 
 #header-contact {
   font-size: 3rem;
-  color: #3B8223;
+  color: #3b8223;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
 }
@@ -457,10 +463,9 @@ input {
   border-bottom: 1px solid black;
   text-align: center;
   text-rendering: optimizeLegibility;
-
 }
 
-@media screen and (max-width: 565px) { 
+@media screen and (max-width: 565px) {
   #why-musify-image {
     width: 300px;
     height: 200px;
@@ -468,9 +473,9 @@ input {
 
   #why-musify-text-h2 {
     font-size: 2.5rem;
-    color: #3B8223;
+    color: #3b8223;
   }
-  
+
   #why-musify-text-p {
     font-family: Poppins;
     font-size: 1rem;
@@ -478,11 +483,10 @@ input {
   }
 }
 
-
-@media screen and (max-width: 916px) { 
+@media screen and (max-width: 916px) {
   #why-musify-image {
     margin-left: 0;
-    margin-right: 0;  
+    margin-right: 0;
   }
 
   .start-now {
@@ -492,7 +496,7 @@ input {
   }
 }
 
-@media screen and (max-width: 438px) { 
+@media screen and (max-width: 438px) {
   #cards-container {
     height: 40rem;
   }
