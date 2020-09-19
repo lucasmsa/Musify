@@ -7,7 +7,7 @@
 
   <!-- bootstrap -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300&family=Roboto+Condensed:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300&family=Prompt:wght@700&family=Roboto+Condensed:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -26,14 +26,14 @@
 </head>
 
 <body>
-  <section id="home">
+  <header>
     <nav>
       <div class="logo">
-        <img id="musify-icon" src="./public/assets/title-icon.png" alt="Musify Icon">
+        <img src="./public/assets/title-icon.png" alt="Musify Icon">
         <h4 class="logo-text">Musify</h4>
       </div>
       <ul class="nav-links">
-        <li><a href="https://youtu.be/6QCMGKUH6Ak?t=4" target="_blank">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#why-musify">Why</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -44,76 +44,80 @@
         <div class="line"></div>
       </div>
     </nav>
-    
-    <div class="presentation-container">
-      <div class="presentation">
-        <h1>Connect to the world's top musicians</h1>
-        <button class="start-now">Start Now</button>
-      </div>
-    </div>
-  </section>
+  </header>
 
-  <section id='about'>
-    <div id='about-elements'>
-      <div id='about-text'>
-        <h2 id='about-text-h2'>
-          <strong>About</strong>
-        </h2>
-        <p id='about-text-p'>Teach or learn from people everywhere with a simple to use application, 
-          accessible prices and guaranteed results</p>
+  <div class="content-wrapper">
+    <section id="home">
+      <div class="presentation-container">
+        <div class="presentation">
+          <h1>Connect to the world's top musicians</h1>
+          <button class="start-now">Start Now</button>
+        </div>
       </div>
-      <div id='about-image-wrapper'>
-        <img id='about-image' src="./public/assets/guitar-about.jpeg" alt="">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id='why-musify'>
-    <div id='why-musify-elements'>
-      <div id='why-musify-text'>
-        <h2 id='why-musify-text-h2'>
-          <strong>Why Musify?</strong>
-        </h2>
-        <p id='why-musify-text-p'>Talk to musicians all over the world
-          Learn and perfect your skills on any instrument
-          Teach people on any level and get better </p>
-      </div>  
-    </div>
-    <div id='cards-container'>
-      <div class='card'>
-        <div class="card-header">
-          <h6 class='header-price-text'>Learn <img class="icon-card" src="./public/assets/speaker.svg"></h6>
+    <section id='about'>
+      <div id='about-elements'>
+        <div id='about-text'>
+          <h2 id='about-text-h2'>
+            <strong>About</strong>
+          </h2>
+          <p id='about-text-p'>Teach or learn from people everywhere with a simple to use application,
+            accessible prices and guaranteed results</p>
         </div>
-        <div class="card-items">
-          <ul class='list-prices'>
-            <li>Learn from people all over the world</li>
-            <hr>
-            <li>Watch and re-watch classes to perfect your craft</li>
-            <hr>
-            <li>Achieve your musical goals with a certified system</li>
-          </ul>
+        <div id='about-image-wrapper'>
+          <img id='about-image' src="./public/assets/guitar-about.jpeg" alt="">
         </div>
-        <button class="join-price">Join now</button>
       </div>
-      <div class='card'>
-        <div class="card-header">
-          <h6 class='header-price-text'>Teach <img class="icon-card" src="./public/assets/disc.svg"></h6>
-        </div>
-        <div class="card-items">
-          <ul class='list-prices'>
-            <li>Teach people and help them get better on a different range of musical instruments </li>
-          </ul>
-        </div>
-        <button class="join-price">Join now</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id='contact'>
-    <h2 id='header-contact'>Contact</h2>
-    <input class="inp" placeholder="Name"/>
-    <input class="inp" placeholder="E-mail"/>
-  </section>
+    <section id='why-musify'>
+      <div id='why-musify-elements'>
+        <div id='why-musify-text'>
+          <h2 id='why-musify-text-h2'>
+            <strong>Why Musify?</strong>
+          </h2>
+          <p id='why-musify-text-p'>Talk to musicians all over the world
+            Learn and perfect your skills on any instrument
+            Teach people on any level and get better </p>
+        </div>
+      </div>
+      <div id='cards-container'>
+        <div class='card'>
+          <div class="card-header">
+            <h6 class='header-price-text'>Learn <img class="icon-card" src="./public/assets/speaker.svg"></h6>
+          </div>
+          <div class="card-items">
+            <ul class='list-prices'>
+              <li>Learn from people all over the world</li>
+              <hr>
+              <li>Watch and re-watch classes to perfect your craft</li>
+              <hr>
+              <li>Achieve your musical goals with a certified system</li>
+            </ul>
+          </div>
+          <button class="join-price">Join now</button>
+        </div>
+        <div class='card'>
+          <div class="card-header">
+            <h6 class='header-price-text'>Teach <img class="icon-card" src="./public/assets/disc.svg"></h6>
+          </div>
+          <div class="card-items">
+            <ul class='list-prices'>
+              <li>Teach people and help them get better on a different range of musical instruments </li>
+            </ul>
+          </div>
+          <button class="join-price">Join now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id='contact'>
+      <h2 id='header-contact'>Contact</h2>
+      <input class="inp" placeholder="Name" />
+      <input class="inp" placeholder="E-mail" />
+    </section>
+  </div>
 
   <script src="./view/index.js"></script>
 </body>
