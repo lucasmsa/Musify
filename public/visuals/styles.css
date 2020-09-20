@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
 html,
 body {
   width: 100%;
@@ -142,7 +153,7 @@ nav .logo-text {
   font-family: Montserrat;
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: 1vmax;
+  font-size: 1rem;
   color: #ebebeb;
   background-color: #3c8223;
   border: none;
@@ -218,22 +229,18 @@ nav .logo-text {
   }
 }
 
-/* About */
+/*********************About*********************/
 
 #about {
   width: 100%;
   background: #ebebeb;
-  padding-top: 2.5rem;
-  padding-bottom: 5rem;
+  padding: 9% 6%;
 }
 
 #about-elements {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 #about-text {
@@ -244,27 +251,23 @@ nav .logo-text {
 
 #about-text-h2 {
   font-family: "Montserrat";
-  font-size: 3.5rem;
-  color: #3b8223;
+  font-size: 2.5rem;
+  color: #5da841;
   margin-bottom: 2rem;
 }
 
 #about-text-p {
   font-family: Poppins;
   font-size: 1.1rem;
+  font-weight: 400;
   max-width: 400px;
-}
-
-#about-image-wrapper {
-  display: flex;
+  color: #2a2b2b;
 }
 
 #about-image {
-  width: 550px;
-  height: 360px;
+  width: 380px;
+  height: 240px;
   border: 4px solid #000000;
-  margin-right: 50px;
-  margin-left: 5rem;
 }
 
 @media screen and (max-width: 565px) {
@@ -304,13 +307,12 @@ nav .logo-text {
   }
 }
 
-/* Why Musify */
+/*********************Why Musify*********************/
 
 #why-musify {
-  padding-top: 5rem;
+  padding: 5% 2%;
   width: 100%;
   background: #141212;
-  padding-bottom: 15rem;
 }
 
 #why-musify-elements {
@@ -319,19 +321,20 @@ nav .logo-text {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 4rem;
 }
 
 #why-musify-text {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
 }
 
 #why-musify-text-h2 {
   font-family: "Montserrat";
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: #3b8223;
-  margin-bottom: 2.25rem;
 }
 
 #why-musify-text-p {
@@ -340,6 +343,7 @@ nav .logo-text {
   color: #f3f9f1;
   max-width: 400px;
   text-align: center;
+  padding: 2rem 0 4rem;
 }
 
 #why-musify-image-wrapper {
@@ -355,15 +359,15 @@ nav .logo-text {
 }
 
 #cards-container {
-  background: #141212;
+  /* background: #141212; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 250px;
-  height: 420px;
+  min-width: 23%;
+  min-height: 95%;
   background: #ebebeb;
   margin: 2px 10px;
   border-radius: 12px;
@@ -378,8 +382,11 @@ nav .logo-text {
 }
 
 .card-items {
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 3rem 0;
+  height: 100%;
 }
 
 .header-price-text {
@@ -437,6 +444,11 @@ nav .logo-text {
 }
 
 /* Contact */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 #contact {
   background: #ebebeb;
@@ -445,16 +457,39 @@ nav .logo-text {
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+#contact-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(0deg, #40ff000e, #40ff000e),
+    url(../assets/contact-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #header-contact {
-  font-size: 3rem;
-  color: #3b8223;
+  font-size: 2.5rem;
+  color: #53963b;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
+  padding-bottom: 2rem;
 }
 
-input {
+.contact-wrapper {
+  padding: 7% 5%;
+  border: 3px solid black;
+  background-color: rgba(200, 200, 200, 0.931);
+}
+
+.contact-wrapper input {
   margin-top: 32px;
   border: 0;
   outline: 0;
@@ -463,6 +498,15 @@ input {
   border-bottom: 1px solid black;
   text-align: center;
   text-rendering: optimizeLegibility;
+}
+
+#send-image-wrapper {
+  text-decoration: none;
+}
+
+#send-image {
+  margin-top: 2rem;
+  transform: rotate(20deg);
 }
 
 @media screen and (max-width: 565px) {
@@ -500,4 +544,26 @@ input {
   #cards-container {
     height: 40rem;
   }
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-content {
+  background-color: #141212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0.3rem;
+}
+
+#copyright-text {
+  color: #ecfee6;
+  font-size: 0.6rem;
 }
